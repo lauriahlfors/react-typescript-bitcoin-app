@@ -1,8 +1,10 @@
 import { createContext, ReactNode, useContext } from 'react';
 
+import bitcoinServices from './services/bitcoin.service';
+
 const useBitcoin = () => {
   return {
-    getCoinGeckoData: () => {},
+    getCoinGeckoData: () => bitcoinServices.getCoinGeckoData().then(),
   };
 };
 
