@@ -14,7 +14,7 @@ const BitcoinContext = createContext<ReturnType<typeof useBitcoin> | null>(
 
 export const useBitcoinContext = () => useContext(BitcoinContext)!;
 
-export function StoreProvider({ children }: { children: ReactNode }) {
+export function BitcoinProvider({ children }: { children: ReactNode }) {
   return (
     <BitcoinContext.Provider value={useBitcoin()}>
       {children}
